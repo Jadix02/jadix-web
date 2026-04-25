@@ -6,7 +6,7 @@
     <title>Portafolio | Artista 3D</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* --- VARIABLES GLOBALES --- */
+
         :root {
             --bg-color: #0a0e17;
             --nav-bg: rgba(10, 14, 23, 0.9);
@@ -18,7 +18,7 @@
             --input-bg: #1a1e24;
         }
 
-        /* --- BASE Y TIPOGRAFÍA --- */
+
         html {
             scroll-behavior: smooth;
         }
@@ -41,7 +41,6 @@
             color: var(--accent-color);
         }
 
-        /* Clases utilitarias */
         .titulo-seccion {
             text-align: center;
             width: 100%;
@@ -52,6 +51,7 @@
             font-size: 3rem;
             margin-bottom: 10px;
             color: var(--text-color);
+            text-align: center;
         }
 
         .texto-destacado {
@@ -59,13 +59,15 @@
             max-width: 700px;
             font-size: 1.1rem;
             margin-top: 0;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .margen-top-30 {
             margin-top: 30px;
         }
 
-        /* --- NAVEGACIÓN --- */
         nav {
             position: fixed;
             top: 0;
@@ -101,7 +103,6 @@
             font-weight: bold;
         }
 
-        /* --- SECCIONES GENERALES --- */
         section {
             min-height: auto;
             padding: 80px 20px 50px;
@@ -120,7 +121,6 @@
             transition: opacity 0.2s ease-in, transform 0.2s ease-in; 
         }
 
-        /* --- INICIO (HERO) --- */
         #inicio {
             position: relative;
             max-width: 100%;
@@ -172,7 +172,6 @@
             margin: 0 auto;
         }
 
-        /* --- SOBRE MÍ --- */
         .sobre-mi-contenedor {
             display: flex;
             align-items: center;
@@ -211,7 +210,6 @@
             margin-bottom: 15px;
         }
 
-        /* --- PORTAFOLIO (GALERÍA) --- */
         .galeria {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -235,7 +233,6 @@
             display: flex;
             flex-direction: column;
             cursor: pointer;
-            /* ¡CORREGIDO! Se quitó la coma y se añadió la transición de la sombra */
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
         }
 
@@ -251,7 +248,6 @@
 
         .modelo-card:hover .modelo-img {
             height: 400px; 
-            /* ¡CORREGIDO! Se combinan las dos transformaciones en una sola línea */
             transform: translateY(-5px) scale(1.05); 
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
         }
@@ -282,15 +278,17 @@
             color: var(--text-color);
         }
 
-        /* --- CONTACTO Y FORMULARIO --- */
         .contacto-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             gap: 40px;
             margin-top: 40px;
         }
 
         .formulario-caja {
+            width: 100%;
+            max-width: 800px;
             flex: 1 1 60%;
             background-color: #0b0f15;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -380,7 +378,6 @@
         .ic-in:hover { color: #0A66C2; }
         .ic-as:hover { color: #13aff0; }
 
-        /* --- BOTONES Y ETIQUETAS --- */
         .btn, .btn-enviar {
             display: inline-block;
             background-color: var(--accent-color);
@@ -421,7 +418,6 @@
             font-size: 0.9rem;
         }
 
-        /* --- ANIMACIONES DE ELEMENTOS --- */
         .animar-scroll {
             opacity: 0;
             transform: translateY(40px);
@@ -433,7 +429,6 @@
             transform: translateY(0);
         }
 
-        /* --- FOOTER Y RESPONSIVE --- */
         footer {
             text-align: center;
             padding: 20px;
@@ -463,7 +458,7 @@
             position: absolute;
             max-width: 700px;  
             z-index: 5;        
-            transform: translate(880px, 10px); 
+            transform: translate(880px, 22px); 
         }
     </style>
 </head>
@@ -483,8 +478,8 @@
         <div class="overlay"></div>
 
         <div class="contenido-hero">
-            <h1 class="animar-scroll">Hi, i'm Jahir</h1>
-            <p class="animar-scroll">3D artist and video game designer</p>
+            <h1 class="animar-scroll">Hola, soy Jahir</h1>
+            <p class="animar-scroll">Artista 3D y diseñador de videojuegos</p>
             <div class="margen-top-30 animar-scroll">
                 <a href="#portafolio" class="btn">Ver mi trabajo</a>
             </div>
@@ -525,27 +520,27 @@
         <div class="galeria">
             <div class="modelo-card animar-scroll">
                 <div class="modelo-img"><img src="imagenes/render1.jpg" alt="Render 1"></div>
-                <div class="modelo-info"><h3>Proyecto 1</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-info"><h3>Abeja MC</h3><p></p></div>
             </div>
             <div class="modelo-card animar-scroll">
                 <div class="modelo-img"><img src="imagenes/render2.jpg" alt="Render 2"></div>
-                <div class="modelo-info"><h3>Proyecto 2</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-info"><h3>Zelda</h3><p></p></div>
             </div>
             <div class="modelo-card animar-scroll">
                 <div class="modelo-img"><img src="imagenes/render3.png" alt="Render 3"></div>
-                <div class="modelo-info"><h3>Proyecto 3</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-info"><h3>Carapescado</h3><p></p></div>
             </div>
             <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render4.jpg" alt="Render 4"></div>
-                <div class="modelo-info"><h3>Proyecto 4</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-img"><img src="imagenes/render4.png" alt="Render 4"></div>
+                <div class="modelo-info"><h3>Cofre</h3><p></p></div>
             </div>
             <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render5.jpg" alt="Render 5"></div>
-                <div class="modelo-info"><h3>Proyecto 5</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-img"><img src="imagenes/render5.png" alt="Render 5"></div>
+                <div class="modelo-info"><h3>Poké Ball</h3><p></p></div>
             </div>
             <div class="modelo-card animar-scroll">
                 <div class="modelo-img"><img src="imagenes/render6.png" alt="Render 6"></div>
-                <div class="modelo-info"><h3>Proyecto 6</h3><p>Descripción del modelo.</p></div>
+                <div class="modelo-info"><h3>Diorama 3D</h3><p></p></div>
             </div>
         </div>
     </section>
@@ -553,7 +548,7 @@
     <section id="contacto">
         <h1 class="titulo-hero-contacto">Hablemos de tu próximo proyecto</h1>
         <p class="texto-destacado">
-            ¿Tienes una idea en mente o necesitas asesoramiento técnico? Estoy aquí para colaborar en cada paso de tu pipeline creativo.
+            ¿Tienes una idea en mente? Estoy aquí para colaborar en cada paso de tu pipeline creativo.
         </p>
         
         <div class="contacto-container">
@@ -610,7 +605,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // 1. Observador para animaciones de elementos internos
             const elementosAnimados = document.querySelectorAll('.animar-scroll');
             const observerElementos = new IntersectionObserver((entradas) => {
                 entradas.forEach(entrada => {
@@ -624,7 +618,7 @@
 
             elementosAnimados.forEach(el => observerElementos.observe(el));
 
-            // 2. Observador para ocultar/mostrar secciones completas
+
             const bloquesPrincipales = document.querySelectorAll('section, footer');
             const observerSecciones = new IntersectionObserver((entradas) => {
                 entradas.forEach(entrada => {
@@ -643,7 +637,6 @@
                 observerSecciones.observe(bloque);
             });
 
-            // --- 3. Observador para el Menú ---
             const enlacesMenu = document.querySelectorAll('nav a');
             const seccionesMenu = document.querySelectorAll('section');
 
