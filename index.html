@@ -657,6 +657,19 @@
 
             seccionesMenu.forEach(seccion => observerMenu.observe(seccion));
         });
+
+        const botonInicio = document.querySelector('nav a[href="#inicio"]');
+            
+            botonInicio.addEventListener('click', function(evento) {
+                // Evitamos que el navegador haga su cálculo fallido
+                evento.preventDefault(); 
+                
+                // Le decimos que vaya al tope absoluto de la página suavemente
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
     </script>
 </body>
 </html>
