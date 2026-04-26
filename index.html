@@ -545,39 +545,47 @@
         </div>
     </section>
 
-    <section id="contacto">
-        <h1 class="titulo-hero-contacto">Hablemos de tu próximo proyecto</h1>
-        <p class="texto-destacado">
-            ¿Tienes una idea en mente? Estoy aquí para colaborar en cada paso de tu pipeline creativo.
-        </p>
-        
+    <section id="contacto" class="seccion">
+        <h2 class="titulo-hero-contacto">Hablemos de tu próximo proyecto</h2>
+        <p class="texto-destacado">¿Tienes una idea en mente o necesitas asesoramiento técnico? Estoy aquí para colaborar en cada paso de tu pipeline creativo.</p>
+
         <div class="contacto-container">
+            
             <div class="formulario-caja">
-                <form action="#" method="POST">
+                
+                <form action="https://script.google.com/macros/s/AKfycbxSNQGhjurZiATHQpUZj9pRHakDlFG8qp-URSsoMifmAk2lhAm1NzHToevmYomHAxEP/exec" method="POST">
+                    
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <label>Nombre *</label>
+                            <input type="text" name="nombre" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" name="email" required>
+                            <label>Correo electrónico *</label>
+                            <input type="email" name="email" required>
                         </div>
-                    </div>
-                    
-                    <div class="form-group" style="margin-bottom: 20px;">
-                        <label for="asunto">Asunto *</label>
-                        <input type="text" id="asunto" name="asunto" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="mensaje">Mensaje *</label>
-                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <label>Asunto *</label>
+                        <input type="text" name="asunto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mensaje *</label>
+                        <textarea rows="5" name="mensaje" required></textarea>
                     </div>
 
                     <button type="submit" class="btn-enviar">Enviar mensaje</button>
                 </form>
+                </div>
+
+            <div class="redes-caja">
+                <h3>Conecta conmigo</h3>
+                <div class="iconos-redes">
+                    </div>
             </div>
+        </div>
 
             <div class="redes-caja">
                 <h3>Conecta conmigo</h3>
@@ -661,10 +669,7 @@
         const botonInicio = document.querySelector('nav a[href="#inicio"]');
             
             botonInicio.addEventListener('click', function(evento) {
-                // Evitamos que el navegador haga su cálculo fallido
                 evento.preventDefault(); 
-                
-                // Le decimos que vaya al tope absoluto de la página suavemente
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
