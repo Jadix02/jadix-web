@@ -454,12 +454,54 @@
             }
         }
 
-        .imagen-libre {
-            position: absolute;
-            max-width: 700px;  
-            z-index: 5;        
-            transform: translate(880px, 22px); 
-        }
+        .mensaje-agradecimiento {
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); 
+    text-align: center;
+    animation: aparecer 0.5s ease-out; 
+}
+
+.icono-exito {
+    font-size: 3.5rem;
+    color: #00d4ff; /* Azul neón profesional */
+    margin-bottom: 20px;
+    animation: flotar 2s infinite ease-in-out;
+}
+
+.mensaje-agradecimiento h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.btn-regresar {
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-regresar:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
     </style>
 </head>
 <body>
@@ -486,126 +528,55 @@
         </div>
     </section>
 
-    <section id="sobre-mi">
-        <h2 class="titulo-seccion">Sobre Mí</h2>
-        
-        <div class="sobre-mi-contenedor animar-scroll">
-            <div class="sobre-mi-foto">
-                <img src="imagenes/tu-foto.jpg" alt="Foto de Perfil de Jahir">
-            </div>
-
-            <div class="sobre-mi-texto">
-                <p>Soy Jahir Marcos Salazar, mejor conocido como Jadix, artista 3D egresado de la <strong>Licenciatura en Diseño y Arte para Videojuegos en UNIAT</strong>, campus San Luis Potosí.
-                    Mientras estudiaba la carrera, me llamó la atención el modelado 3D, áreas como la creación de personajes, props y escenarios me atraparon completamente. El modelado, el texturizado, UV y la iluminación fueron el inicio para llegar al render final. Ver el resultado de todo el trabajo fue gratificante y reforzó mis ganas de dedicarme al Arte 3D.</p>
-                <p>Actualmente, trabajo como freelancer para la visualización de productos 3D y arte para videojuegos. Entre mis logros, destaca mi participación en el NASA Space Apps Challenge como modelador 3D, donde apoyé con el despliegue de UV e implementación de texturas en Unity.</p>
-
-                <h3 class="margen-top-30">Mi Pipeline / Software:</h3>
-                <div class="skills">
-                    <span class="skill-tag">Blender</span>
-                    <span class="skill-tag">Autodesk Maya</span>
-                    <span class="skill-tag">ZBrush</span>
-                    <span class="skill-tag">Substance Painter</span>
-                    <span class="skill-tag">Unreal Engine / UEFN</span>
-                </div>
-            </div>
-        </div>
-
-        <img src="imagenes/mi-render.png" class="imagen-libre" alt="Render 3D">
-    </section>
-
-    <section id="portafolio" class="ancho-extra">
-        <h2>Mis Proyectos</h2>
-        <p>Proyectos de entornos, props y desarrollo en motores gráficos.</p>
-        
-        <div class="galeria">
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render1.jpg" alt="Render 1"></div>
-                <div class="modelo-info"><h3>Abeja MC</h3><p></p></div>
-            </div>
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render2.jpg" alt="Render 2"></div>
-                <div class="modelo-info"><h3>Zelda</h3><p></p></div>
-            </div>
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render3.png" alt="Render 3"></div>
-                <div class="modelo-info"><h3>Carapescado</h3><p></p></div>
-            </div>
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render4.png" alt="Render 4"></div>
-                <div class="modelo-info"><h3>Cofre</h3><p></p></div>
-            </div>
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render5.png" alt="Render 5"></div>
-                <div class="modelo-info"><h3>Poké Ball</h3><p></p></div>
-            </div>
-            <div class="modelo-card animar-scroll">
-                <div class="modelo-img"><img src="imagenes/render6.png" alt="Render 6"></div>
-                <div class="modelo-info"><h3>Diorama 3D</h3><p></p></div>
-            </div>
-        </div>
-    </section>
-
     <section id="contacto" class="seccion">
-        <h2 class="titulo-hero-contacto">Hablemos de tu próximo proyecto</h2>
-        <p class="texto-destacado">¿Tienes una idea en mente o necesitas asesoramiento técnico? Estoy aquí para colaborar en cada paso de tu pipeline creativo.</p>
+    <h2 class="titulo-hero-contacto">Hablemos de tu próximo proyecto</h2>
+    <p class="texto-destacado">¿Tienes una idea en mente o necesitas asesoramiento técnico? Estoy aquí para colaborar en cada paso de tu pipeline creativo.</p>
 
-        <div class="contacto-container">
-            
-            <div class="formulario-caja">
-                
-                <form action="https://script.google.com/macros/s/AKfycbxSNQGhjurZiATHQpUZj9pRHakDlFG8qp-URSsoMifmAk2lhAm1NzHToevmYomHAxEP/exec" method="POST">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Nombre *</label>
-                            <input type="text" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Correo electrónico *</label>
-                            <input type="email" name="email" required>
-                        </div>
-                    </div>
-
+    <div class="contacto-container">
+        <div class="formulario-caja">
+            <form id="formulario-contacto" action="https://script.google.com/macros/s/AKfycbxSNQGhjurZiATHQpUZj9pRHakDlFG8qp-URSsoMifmAk2lhAm1NzHToevmYomHAxEP/exec" method="POST">
+                <div class="form-row">
                     <div class="form-group">
-                        <label>Asunto *</label>
-                        <input type="text" name="asunto" required>
+                        <label>Nombre *</label>
+                        <input type="text" name="nombre" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Mensaje *</label>
-                        <textarea rows="5" name="mensaje" required></textarea>
+                        <label>Correo electrónico *</label>
+                        <input type="email" name="email" required>
                     </div>
-
-                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
-                </form>
                 </div>
+                <div class="form-group">
+                    <label>Asunto *</label>
+                    <input type="text" name="asunto" required>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje *</label>
+                    <textarea rows="5" name="mensaje" required></textarea>
+                </div>
+                <button type="submit" id="btn-enviar" class="btn-enviar">Enviar mensaje</button>
+            </form>
 
-            <div class="redes-caja">
-                <h3>Conecta conmigo</h3>
-                <div class="iconos-redes">
-                    </div>
+            <div id="mensaje-exito" class="mensaje-agradecimiento" style="display: none;">
+                <div class="icono-exito">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3>¡Mensaje enviado con éxito! 🚀</h3>
+                <p>Gracias por contactarme, Jahir. He recibido tus datos y te responderé lo más pronto posible para que hablemos de tu proyecto.</p>
+                <button type="button" onclick="location.reload()" class="btn-regresar">Enviar otro mensaje</button>
             </div>
         </div>
 
-            <div class="redes-caja">
-                <h3>Conecta conmigo</h3>
-                <div class="iconos-redes">
-                    <a href="https://www.instagram.com/jadix_art" class="ic-ig" aria-label="Instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@jadix.designer" class="ic-yt" aria-label="YouTube" target="_blank">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jahirmarcos/" class="ic-in" aria-label="LinkedIn" target="_blank">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.artstation.com/jadix" class="ic-as" aria-label="ArtStation" target="_blank">
-                        <i class="fa-brands fa-artstation"></i>
-                    </a>
-                </div>
+        <div class="redes-caja">
+            <h3>Conecta conmigo</h3>
+            <div class="iconos-redes">
+                <a href="https://www.instagram.com/jadix_art" class="ic-ig" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@jadix.designer" class="ic-yt" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/jahirmarcos/" class="ic-in" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.artstation.com/jadix" class="ic-as" target="_blank"><i class="fa-brands fa-artstation"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 Jahir Marcos Salazar. Todos los derechos reservados.</p>
@@ -675,6 +646,33 @@
                     behavior: 'smooth'
                 });
             });
+            
+            const formulario = document.getElementById('formulario-contacto');
+            const btnEnviar = document.getElementById('btn-enviar');
+            const mensajeExito = document.getElementById('mensaje-exito');
+            
+            if (formulario) {
+                formulario.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Evita la pantalla blanca
+        
+                    btnEnviar.innerText = 'Enviando...';
+                    btnEnviar.disabled = true;
+
+                    fetch(formulario.action, {
+                        method: 'POST',
+                        body: new FormData(formulario)
+                    })
+                    .then(response => {
+                        formulario.style.display = 'none';
+                        mensajeExito.style.display = 'block';
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        btnEnviar.innerText = 'Error al enviar';
+                        btnEnviar.disabled = false;
+                    });
+                });
+            }
     </script>
 </body>
 </html>
